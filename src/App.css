@@ -5,3 +5,19 @@
 .body {
   background-color: var(--color-background) !important;
 }
+
+.login-page-wrapper {
+  width: 100%;
+  /* max-width: 500px; */
+  height: 85vh;
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .login-page-wrapper {
+    padding: 1rem 2rem;
+  }
+}

@@ -1,23 +1,18 @@
-import { useState } from 'react';
-import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import Home from './Pages/Home/Home';
-import Posts from './Pages/Posts/Posts';
-import About from './Pages/About/About';
-import Error from './Pages/Error/Error';
-import Comments from './Pages/Comments/Comments';
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./Pages/Home/Home";
+import Posts from "./Pages/Posts/Posts";
+import About from "./Pages/About/About";
+import Error from "./Pages/Error/Error";
+import Comments from "./Pages/Comments/Comments";
 
-import {
-  BrowserRouter,
-  createBrowserRouter,
-  Outlet,
-  RouterProvider,
-} from 'react-router-dom';
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import Login from "./Pages/Login/Login";
 
 function App() {
   const router = createBrowserRouter([
     {
-      path: '',
+      path: "",
       element: (
         <div>
           <Navbar />
@@ -25,9 +20,9 @@ function App() {
         </div>
       ),
       children: [
-        { path: '/', element: <Home />, errorElement: <Error /> },
+        { path: "/", element: <Home />, errorElement: <Error /> },
         {
-          path: 'posts',
+          path: "posts",
           element: (
             <div>
               <Posts />
@@ -35,12 +30,18 @@ function App() {
           ),
           errorElement: <Error />,
         },
-        { path: 'about', element: <About />, errorElement: <Error /> },
-        { path: 'comments/:postId', element: <Comments /> , errorElement: <Error />,},
+        { path: "about", element: <About />, errorElement: <Error /> },
+        {
+          path: "comments/:postId",
+          element: <Comments />,
+          errorElement: <Error />,
+        },
+        { path: "login", element: <div className="login-page-wrapper">
+          <Login />
+        </div>, errorElement: <Error /> },
       ],
     },
   ]);
-  const [count, setCount] = useState(0);
 
   return (
     <>

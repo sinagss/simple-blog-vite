@@ -1,9 +1,8 @@
 .home-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 1rem;
-  height: 80vh;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 90vh;
   overflow: hidden;
   flex-wrap: wrap;
 }
@@ -22,6 +21,13 @@
 
 .home-container h3 {
   margin-left: 3rem;
+}
+
+.login-wrapper {
+  margin: 2rem;
+  padding: 2rem;
+  max-width: 400px;
+  
 }
 
 @media screen and (max-width: 600px) {
