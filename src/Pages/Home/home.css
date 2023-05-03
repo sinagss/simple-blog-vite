@@ -1,0 +1,32 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+  height: 80vh;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.home-container span {
+  color: yellow;
+  font-weight: 800;
+  font-size: 3.5rem;
+}
+
+#styled-span {
+  color: yellow;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.home-container h3 {
+  margin-left: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+  .home-container h3 {
+    margin-left: 0;
+    text-align: center;
+  }
+}

@@ -1,0 +1,26 @@
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1rem;
+  border: 0.15rem solid rgba(255, 0, 0, 0.096);
+  border-radius: 0.8rem;
+  transition: all;
+  transition-duration: 250ms;
+  max-width: 600px;
+  margin: 0 2rem;
+  gap: 4px;
+}
+
+.comment-container:hover {
+  border-color: red;
+  scale: 1.05;
+}
+
+.comment-container small {
+  color: rgb(129, 129, 129);
+}
+
+.comment-container span {
+  color: rgb(253, 253, 143);
+}

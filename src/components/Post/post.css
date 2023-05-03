@@ -1,0 +1,20 @@
+.post-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 0.15rem solid var(--color-accent-alt);
+  border-radius: 0.8rem;
+  transition: all;
+  transition-duration: 250ms;
+  cursor: pointer;
+  max-width: 600px;
+}
+
+#post-title {
+  border-bottom: 1px solid var(--color-accent-alt);
+}
+
+.post-container:hover {
+  border-color: var(--color-accent);
+  scale: 1.05;
+}

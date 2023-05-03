@@ -1,0 +1,28 @@
+.toTop-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  background-color: var(--color-secondary);
+  padding: 0.5rem;
+  color: black;
+  transition: all;
+  transition-duration: 250ms;
+  border-radius: 0.8rem;
+}
+
+.toTop-container:hover {
+  /* scale: 1.12; */
+  padding: 0.7rem;
+  bottom: 12px;
+  right: 12px;
+}
+
+.up-icon {
+  font-size: 1.8rem;
+}

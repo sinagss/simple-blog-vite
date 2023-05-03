@@ -1,0 +1,16 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 10rem;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+  .about-container {
+    padding: 2rem 2rem;
+  }
+}
