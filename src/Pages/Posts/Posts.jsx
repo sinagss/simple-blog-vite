@@ -26,7 +26,7 @@ const Posts = (props) => {
   };
 
   const onSearchClickHandler = () => {
-    setSearchParams({...query, isSubmit:1}, {replace:true})
+    setSearchParams({query, isSubmit:1}, {replace:true})
   };
 
   const allPosts =
