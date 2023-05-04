@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import Post from '../../components/Post/Post';
 import Loading from '../../components/UI/Loading/Loading';
 import ScrollToTop from '../../components/UI/ScrollToTop/ScrollToTop';
@@ -56,7 +56,7 @@ const Posts = (props) => {
         onChange={onQueryChangeHandler}
         value={query}
       />
-      <button onClick={onSearchClickHandler}>Search <GoSearch/></button>
+      <button onClick={onSearchClickHandler} id='btn-search'>Search <GoSearch/></button>
     </div>
   );
 

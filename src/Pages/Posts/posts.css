@@ -23,3 +23,12 @@
   padding: 1rem;
   width: 100%;
 }
+
+#btn-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 8px;
+  width: max-content;
+  max-width: 120px;
+}
