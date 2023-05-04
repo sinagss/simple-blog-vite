@@ -1,7 +1,39 @@
+import { useRef, useState } from "react";
 import "./Login.css";
 
 const Login = () => {
-  return (
+  const usernameInput = useRef();
+  const passwordInput = useRef();
+
+  const [credentials, setCredentials] = useState({
+    username: "",
+    password: "",
+    isLogedIn: false,
+  });
+
+  const onLoginHandler = (event) => {
+    event.preventDefault();
+    setCredentials({
+      username: usernameInput.current.value,
+      password: passwordInput.current.value,
+      isLogedIn: true,
+    });
+
+  };
+
+  const logedIn = (
+    <div>
+      <section className="login" id="login">
+        <div className="head">
+          <h1 className="company">
+            Welcome Back <span>{credentials.username.toUpperCase()}</span>
+          </h1>
+        </div>
+      </section>
+    </div>
+  );
+
+  const login = (
     <div className="login-container">
       <section className="login" id="login">
         <div className="head">
@@ -11,13 +43,14 @@ const Login = () => {
         </div>
         <p className="msg">Welcome Back</p>
         <div className="form">
-          <form>
+          <form onSubmit={onLoginHandler}>
             <input
               type="text"
               name="username"
               id="username"
               placeholder="Username"
               className="text"
+              ref={usernameInput}
             />
             <input
               type="password"
@@ -25,13 +58,14 @@ const Login = () => {
               id="password"
               placeholder="••••••••••••••"
               className="password"
+              ref={passwordInput}
             />
             <div
               style={{ display: "flex", gap: "0.6rem", alignItems: "center" }}
             >
-              <a href="#" className="btn-login" id="do-login">
+              <button className="btn-login" id="do-login">
                 Login
-              </a>
+              </button>
               <a href="#" className="forgot">
                 Forgot password?
               </a>
@@ -41,6 +75,8 @@ const Login = () => {
       </section>
     </div>
   );
+
+  return <>{credentials.isLogedIn ? logedIn : login}</>;
 };
 
 export default Login;
