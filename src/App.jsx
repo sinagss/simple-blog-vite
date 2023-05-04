@@ -20,7 +20,13 @@ function App() {
         </div>
       ),
       children: [
-        { path: "/", element: <Home />, errorElement: <Error /> },
+        {
+          path: "/",
+          element: (
+              <Home />
+          ),
+          errorElement: <Error />,
+        },
         {
           path: "posts",
           element: (
@@ -36,9 +42,15 @@ function App() {
           element: <Comments />,
           errorElement: <Error />,
         },
-        { path: "login", element: <div className="login-page-wrapper">
-          <Login />
-        </div>, errorElement: <Error /> },
+        {
+          path: "login",
+          element: (
+            <div className="login-page-wrapper">
+              <Login />
+            </div>
+          ),
+          errorElement: <Error />,
+        },
       ],
     },
   ]);

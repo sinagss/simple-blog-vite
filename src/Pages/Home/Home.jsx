@@ -9,7 +9,7 @@ const Home = () => {
         </h1>
         <h3>
           Click on the <span id="styled-span">Posts Link</span> in the
-          navigation bar{" "}
+          navigation bar
         </h3>
       </div>
       <div className="login-wrapper">

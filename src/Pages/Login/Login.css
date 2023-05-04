@@ -2,9 +2,6 @@
   background: var(--color-background-dark);
   font-family: Assistant, sans-serif;
   display: flex;
-  /* height: 90vh; */
-  /* max-width: 60%; */
-  /* padding: 2rem 10rem; */
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -69,20 +66,20 @@
 .login .form .btn-login {
   background: none;
   text-decoration: none;
-  color: white;
-  box-shadow: 0px 0px 0px 2px white;
+  color: var(--color-secondary);
+  box-shadow: 0px 0px 0px 2px var(--color-secondary);
   border-radius: 3px;
   padding: 5px 2em;
   transition: 0.5s;
 }
 .login .form .btn-login:hover {
-  background: white;
+  background: var(--color-secondary);
   color: dimgray;
   transition: 0.5s;
 }
 .login .forgot {
   text-decoration: none;
-  color: white;
+  color: var(--color-secondary);
   float: right;
 }
 footer {
